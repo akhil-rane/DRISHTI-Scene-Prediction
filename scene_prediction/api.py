@@ -15,7 +15,7 @@ def upload_files():
         f = request.files['file']
         f.save(f.filename)
         nb = ScenePredictNB()
-        result_scene = nb.predict(f.filename)
+        result_scene = nb.predict_image(f.filename)
         return result_scene
     if request.method == "GET":
         return '''<html>
