@@ -5,7 +5,7 @@ from ScenePreditNB import ScenePredictNB
 nb = ScenePredictNB()
 #data loading
 #loading training data
-
+'''
 with open('/home/semicolon/DRISHTI/DRISHTI/training_data/meeting_data_aws', 'r') as myfile:
     meeting_data = myfile.read().replace('\n', '')
 with open('/home/semicolon/DRISHTI/DRISHTI/training_data/cafeteria_data_aws', 'r') as myfile:
@@ -19,11 +19,6 @@ data = [meeting_data, cafeteria_data, park_data, parking_lot_data]
 target = ['meeting', 'cafeteria', 'park', 'parking_lot']
 nb.train(data,target)
 '''
-file_path='cafe.jpg'
-import time
 
-now=time.time()
-print (nb.predict('employee table computer'))
-later=time.time()
-print later-now
-'''
+print (nb.predict(list=['employee','office','people']))
+

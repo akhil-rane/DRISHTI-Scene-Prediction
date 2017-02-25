@@ -46,8 +46,11 @@ class ScenePredictNB:
         print ('Naive Bayes Model trained..')
 
 
-    def predict(self,test_tags):
+    def predict(self,list):
 
+        test_tags=''
+        for tag in list:
+            test_tags=test_tags+tag+' '
         with open('classifier_data.pickle', 'rb') as cd:
             classifierData = cPickle.load(cd)
         with open('scene_predict_nb.pickle', 'rb') as f:
